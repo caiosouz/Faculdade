@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario | GN</title>
+    <style>
+            /* ESTILIZAÇÃO GERAL */
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(19, 215, 221), rgb(23, 37, 50));
+
+        }
+
+            /* BOX COMPLETO */
+
+        .box {
+            
+            color: #ffffff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 15px;
+            width: 25%;
+            
+        }
+
+            /* LINHA BORDA */
+
+        fieldset {
+            
+            border: 2px solid dodgerblue;
+            border-radius: 10px;
+
+        }
+
+        legend {
+            
+            border: 1px solid dodgerblue;
+            padding: 5px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 5px;
+            
+        }
+
+            /* TEXTO VISUALIZADO USUÁRIO FINAL */
+
+        .inputbox {
+
+            position: relative;
+            letter-spacing: 3px;
+
+        }
+
+        .inputUser {
+
+            background: none;
+            border: none;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            outline: none;
+            color: white;
+            font-size: 10px;
+            width: 100%;
+
+        }
+            
+            /* ESTILIZAÇÃO DOS (DADOS PRINCIPAIS E MORADIA) */
+
+        .labelinput {
+
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+
+        }
+
+        .inputUser:focus ~ .labelinput, .inputUser:valid ~ .labelinput {
+
+            top: -20px;
+            font-size: 12px;
+
+        }
+
+            /* DATA DE NASCIMENTO */
+
+        #data_nascimento {
+
+            border: none;
+            padding: 6px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            /* letter-spacing: 2px; */
+
+        }
+
+            /* BOTÃO ENVIAR */
+
+        #submit {
+
+            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            
+        }
+
+        #submit:hover {
+            background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80, 19, 195));
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Formulario de Clientes</b></legend>
+                <br>
+
+                    <!-- DADOS PRINCIPAIS -->
+                    
+                <p>Dados:</p>
+                <div class="inputbox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelinput">Nome Completo</label>
+                </div>
+
+                <br><br>
+
+                <div class="inputbox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="nome" class="labelinput">Email</label>
+                </div>
+
+                <br><br>
+
+                <div class="inputbox">
+                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                    <label for="nome" class="labelinput">Telefone</label>
+                </div>
+
+                <br><br>
+                
+                <div class="inputbox">
+                    <input type="password" name="Senha" id="Senha" class="inputUser" required>
+                    <label for="password" class="labelinput">Password</label>
+                </div>
+
+                    <!-- GENERO -->
+
+                <br>
+                <p>Sexo:</p>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for="outro">Outro</label>
+
+                <br><br><br>
+
+                    <!-- DATA DE NASCIMENTO -->
+                
+                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                
+                <input type="date" name="data_nascimento" id="data_nascimento" required>
+                
+                <br><br><br>
+
+                    <!-- CAMPOS DE MORADIA -->
+                
+                <p>Endereço:</p>
+
+                <div class="inputbox">
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                    <label for="cidade" class="labelinput">Cidade</label>
+                </div>
+                
+                <br><br>
+                                
+                <div class="inputbox">
+                    <input type="text" name="estado" id="estado" class="inputUser" required>
+                    <label for="estado" class="labelinput">Estado</label>
+                </div>
+
+                <br><br>
+                
+                <div class="inputbox">
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                    <label for="endereco" class="labelinput">Endereço</label>
+                </div>
+
+                <br><br>
+
+                    <!-- BOTÃO ENVIAR -->
+
+                <input type="submit" name="submit" id="submit">
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

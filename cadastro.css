@@ -1,0 +1,174 @@
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+
+ font-family: Arial, Helvetica, sans-serif;
+ background-color: black;
+
+}
+
+.banner{
+  background: url(images/baner.png) no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+}
+
+/*------MENU-------*/
+.menu-navegacao {
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.4);
+
+}
+
+.menu-navegacao ul {
+  float:  right;
+  margin-right: 20px;
+}
+
+.menu-navegacao ul li {
+  list-style: none;
+  margin: 0 8px;
+  display: inline;
+  line-height: 80px;
+
+}
+
+.menu-navegacao ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: 'Roboto','sans-serif';
+  font-weight: bold;
+  padding: 6px 13px;
+  transition: .4s;
+}
+
+.menu-navegacao ul li a.ativo, .menu-navegacao ul li a:hover {
+  background: black;
+  border-radius: 2px;
+}
+
+/*------LOGO-------*/
+.logo {
+  width: 240px;
+  height: auto;
+  padding: 0px 10px;
+  margin-top: -70px;
+}
+
+
+/* BOX COMPLETO */
+
+.box {
+  
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 15px;
+  width: 25%;
+  
+}
+
+/* LINHA BORDA */
+
+fieldset {
+  
+  border: 2px solid dodgerblue;
+  border-radius: 10px;
+
+}
+
+legend {
+  
+  border: 1px solid dodgerblue;
+  padding: 5px;
+  text-align: center;
+  background-color: dodgerblue;
+  border-radius: 5px;
+  
+}
+
+/* TEXTO VISUALIZADO USUÁRIO FINAL */
+
+.inputbox {
+
+  position: relative;
+  letter-spacing: 3px;
+
+}
+
+.inputUser {
+
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  outline: none;
+  color: white;
+  font-size: 10px;
+  width: 100%;
+
+}
+
+/* ESTILIZAÇÃO DOS (DADOS PRINCIPAIS E MORADIA) */
+
+.labelinput {
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  transition: .5s;
+
+}
+
+.inputUser:focus ~ .labelinput, .inputUser:valid ~ .labelinput {
+
+  top: -20px;
+  font-size: 12px;
+
+}
+
+/* DATA DE NASCIMENTO */
+
+#data_nascimento {
+
+  border: none;
+  padding: 6px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+
+}
+
+/* BOTÃO ENVIAR */
+
+#submit {
+
+  background-image: Black;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+
+#submit:hover {
+  background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80, 19, 195));
+}
+
